@@ -3,6 +3,7 @@
  import uvm_pkg::*; 
 `include "uvm_macros.svh"
   
+  
 `include "fifo_interface.sv"
 
 `include "fifo_transaction.sv"
@@ -15,6 +16,8 @@
 
 `include "fifo_write_monitor.sv"
 `include "fifo_read_monitor.sv"
+
+
 
 `include "fifo_write_agent.sv"
 `include "fifo_read_agent.sv"
@@ -80,6 +83,12 @@ module testbench;
     //run_test("fifo_test_fill_then_empty");
     //run_test("fifo_test_write_only");
   end
+  
+  initial begin
+    $dumpfile("dump.vcd");        
+    $dumpvars(0, testbench);       
+  end
+
 
   always @(posedge fifo_if.wclk) begin
   if (fifo_if.wfull)
