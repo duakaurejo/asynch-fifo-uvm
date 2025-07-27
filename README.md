@@ -19,10 +19,9 @@ The UVM testbench is structured with separate write and read agents, each compos
 
 [1] Clifford E. Cummings, *Simulation and Synthesis Techniques for Asynchronous FIFO Design*  
     [Sunburst Design Paper (PDF)](http://www.sunburst-design.com/papers/CummingsSNUG2002SJ_FIFO1.pdf)  
-↳ Used for the core FIFO RTL design and CDC concepts.
 
 [2] Explore Electronics – *Synchronous FIFO UVM Example*  
     [https://www.edaplayground.com/x/sKnN](https://www.edaplayground.com/x/sKnN)  
-↳ Used  as a learning reference. I reviewed this occasionally when I got stuck understanding UVM structure or component connectivity.
+
 
 
