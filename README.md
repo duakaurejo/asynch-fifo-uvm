@@ -9,15 +9,6 @@ The full project is written and simulated on EDA Playground.
 
 > Note: RTL design files are taken directly from the Sunburst paper [1].
 
-## Motivation
-
-While studying clock domain crossing techniques, I came across Clifford Cummings' paper on asynchronous FIFO design [1]. Around the same time, I began learning UVM due to my growing interest in RTL verification.
-
-To combine both learning goals:
-* I initially wrote a synchronous FIFO (see my other repo).
-* Then, instead of writing the async FIFO RTL from scratch, I used the Sunburst RTL as a starting point so I could focus more on building the UVM environment.
-* I planned to add "almost full" and "almost empty" flags to the design but haven't had time yet.
-
 ## Architecture & Results
 The UVM testbench is structured with separate write and read agents, each composed of a sequencer, driver, and monitor. A shared scoreboard checks correctness, while the environment instantiates and connects all components. Multiple tests trigger different sequence patterns (e.g., write-only, read-only, fill-then-empty, parallel) to verify FIFO behavior under various conditions.
 
